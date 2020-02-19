@@ -30,6 +30,11 @@ function handleClearClick(params) {
   document.getElementById('encoded').value = '';
 }
 
+function handleCopyClick(id) {
+  document.getElementById(id).select();
+  document.execCommand('Copy', false, null);
+}
+
 test = [1, 2, 3];
 
 BASE64 = [

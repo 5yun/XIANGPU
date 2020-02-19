@@ -15,10 +15,13 @@
           placeholder="原文本"
           spellcheck="false"
         ></textarea>
+        <div class="btn btn-copy" onclick="handleCopyClick('origin')">
+          复制
+        </div>
       </div>
       <div class="middle-container">
-        <div class="btn" onclick="handleConvertClick()">转化</div>
-        <div class="btn" onclick="handleBackClick()">还原</div>
+        <div class="btn" onclick="handleConvertClick()">转化↓</div>
+        <div class="btn" onclick="handleBackClick()">还原↑</div>
         <div class="btn" onclick="handleClearClick()">清空</div>
       </div>
       <div class="edge-container">
@@ -27,6 +30,9 @@
           placeholder="转化文本"
           spellcheck="false"
         ></textarea>
+        <div class="btn btn-copy" onclick="handleCopyClick('encoded')">
+          复制
+        </div>
       </div>
     </div>
   </body>
