@@ -16,7 +16,7 @@ function handleConvertClick(params) {
 
 function handleBackClick(params) {
   let str = document.getElementById('encoded').value;
-  let decrypted = str;
+  let decrypted = str.replace(new RegExp('[，。？！“”（）：；、]', 'g'), '');
   for (let i = 0; i < BASE64.length; i++) {
     decrypted = decrypted.replace(new RegExp(HAN[i], 'g'), BASE64[i]);
   }
@@ -31,8 +31,7 @@ function handleClearClick(params) {
 }
 
 function handleCopyClick(id) {
-  document.getElementById(id).select();
-  document.execCommand('Copy', false, null);
+  navigator.clipboard.writeText(document.getElementById(id).value);
 }
 
 test = [1, 2, 3];
